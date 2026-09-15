@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+recordings/*.wav
+transcripts/*.json
+!recordings/.gitkeep
+!transcripts/.gitkeep

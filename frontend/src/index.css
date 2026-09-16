@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+:root {
+  --bg: #F6F7F5;
+  --surface: #FFFFFF;
+  --surface-2: #EDF0EE;
+  --border: #D9DEDA;
+  --text: #1A1E1C;
+  --text-muted: #5A625D;
+  --accent: #146B70;
+  --accent-strong: #0D4C4F;
+  --accent-soft: #E1F0EF;
+  --good: #2E7D4F;
+  --good-bg: #E6F4EA;
+  --good-border: #BFE0CB;
+  --warn: #A5670A;
+  --warn-bg: #FBF0DA;
+  --warn-border: #EFD49E;
+  --critical: #AE3B2E;
+  --critical-bg: #FBE8E4;
+  --critical-border: #F0C2B9;
+}
+
+.dark {
+  --bg: #14181A;
+  --surface: #1B2124;
+  --surface-2: #212A2C;
+  --border: #303A3C;
+  --text: #E8ECE9;
+  --text-muted: #9CA9A4;
+  --accent: #54C2C6;
+  --accent-strong: #8AD9DB;
+  --accent-soft: #173230;
+  --good: #63C888;
+  --good-bg: #163020;
+  --good-border: #2C5238;
+  --warn: #E1AC48;
+  --warn-bg: #332608;
+  --warn-border: #5C4816;
+  --critical: #E67A6A;
+  --critical-bg: #3A1913;
+  --critical-border: #602D24;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
